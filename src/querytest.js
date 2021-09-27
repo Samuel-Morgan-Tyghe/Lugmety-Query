@@ -142,12 +142,9 @@ export const QueryTest = () => {
     a.click();
   };
 
-  const obj = { hello: "world" };
-  const blob = new Blob([JSON.stringify(obj, null, 2)], {
+  const blob = new Blob([JSON.stringify(state, null, 2)], {
     type: "application/json",
   });
-
-  saveFile(blob);
 
   return (
     <div>
